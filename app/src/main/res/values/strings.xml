@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mozi</string>
+    <string name="felh">Felhasználónév:</string>
+    <string name="jel">Jelszó:</string>
+    <string name="bej">Bejelentkezés</string>
+    <string name="reg">Regisztráció</string>
+    <string name="email">E-mail cím:</string>
+    <string name="jelszm">Jelszó újból:</string>
+    <string name="vnevv">Vezeték név:</string>
+    <string name="knevv">Keresztnév:</string>
+    <string name="megse">Mégse</string>
+    <string name="oldalnev">Csillag Mozi</string>
+    <string name="filmcim">Casablanca</string>
+    <string name="leiras">Film leírása:</string>
+</resources>
