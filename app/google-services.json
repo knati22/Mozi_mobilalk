@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28895951485",
+    "project_id": "mobilalkmozi",
+    "storage_bucket": "mobilalkmozi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28895951485:android:3389271a948ad746b40f14",
+        "android_client_info": {
+          "package_name": "com.example.mozi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDolfE6U4PycAYE1i3e0sRZD6s0BH5rzQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

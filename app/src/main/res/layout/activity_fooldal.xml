@@ -9,6 +9,7 @@
     tools:context=".fooldalActivity">
 
 
+
     <LinearLayout
         android:id="@+id/sav"
         android:layout_width="match_parent"

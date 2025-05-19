@@ -12,4 +12,5 @@
     <string name="oldalnev">Csillag Mozi</string>
     <string name="filmcim">Casablanca</string>
     <string name="leiras">Film leírása:</string>
+    <string name="title_activity_film">film</string>
 </resources>

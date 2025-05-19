@@ -1,20 +1,30 @@
 package com.example.mozi;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class regActivity extends AppCompatActivity {
     private static final String REG = regActivity.class.getName();
     private static final int SECRET = 68;
+    private FirebaseAuth mAuth;
     EditText vnevv;
     EditText knevv;
     EditText nevvv;
@@ -36,6 +46,9 @@ public class regActivity extends AppCompatActivity {
 
        // Bundle bundle = getIntent().getExtras();
        // bundle.getInt("SECRET");
+
+
+        mAuth=FirebaseAuth.getInstance();
 
         int secret = getIntent().getIntExtra("SECRET",0);
 
@@ -64,7 +77,18 @@ public class regActivity extends AppCompatActivity {
         if (!jelszo.equals(jelszomeg)){
             Log.e(REG, "A két jelszó nem egyezik");
         }
-        fooldalugras();
+        mAuth.createUserWithEmailAndPassword(emil, jelszo).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Log.d(REG, "Felhasználó létrehozva");
+                    fooldalugras();
+                }else{
+                    Log.d(REG, "nem sikerült a felhasználót létrehozni");
+                    Toast.makeText(regActivity.this, "nem sikerült a felhasználót létrehozni", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     public void meg(View view) {
@@ -73,7 +97,7 @@ public class regActivity extends AppCompatActivity {
 
     private void fooldalugras(){
         Intent intent = new Intent(this, fooldalActivity.class);
-        intent.putExtra("SECRET",SECRET);
+        //intent.putExtra("SECRET",SECRET);
         startActivity(intent);
     }
 

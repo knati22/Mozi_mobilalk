@@ -23,12 +23,12 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <EditText
-        android:id="@+id/nev"
+        android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="@string/felh"
-        android:inputType="text"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nev"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.056" />
 
     <Button
